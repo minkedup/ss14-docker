@@ -1,0 +1,12 @@
+BUILD_VERSION := 01a925da68e9412939c56b62620bd45fec1dfede
+BUILD_ARTIFACT := SS14.Server_linux-x64.zip
+
+all: $(BUILD_ARTIFACT)
+
+$(BUILD_ARTIFACT):
+	./fetch.sh $(BUILD_VERSION) $(BUILD_ARTIFACT)
+
+clean:
+	rm -rf $(BUILD_ARTIFACT)
+
+.PHONY: all clean
