@@ -17,6 +17,7 @@ image:
 	docker buildx build -t $(IMAGE_TAG) .
 
 clean:
-	rm -rf $(BUILD_ARTIFACT)
+	rm -rf $(BUILD_ARTIFACT) $(UNZIP_DIR)
+	docker image rm $(IMAGE_TAG)
 
 .PHONY: all image clean
