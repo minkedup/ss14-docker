@@ -3,7 +3,7 @@
 # Fetch SS14 Server Build Artifact.
 #
 # - Outputs download status to stderr.
-# - Outputs download item to stdout.
+# - Outputs download item to $2.
 #=====================================
 
 if [ -z "$1" ] || [ -z "$2" ]; then
